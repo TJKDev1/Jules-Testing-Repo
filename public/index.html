@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLVS - Synchronised Local Video Streaming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="video-player-area">
+            <video id="main-video" width="100%" controls></video>
+            <div class="custom-controls">
+                <button id="play-pause-btn">Play</button>
+                <input type="range" id="seek-bar" value="0" style="width: 300px;">
+                <span id="time-display">0:00 / 0:00</span>
+            </div>
+            <div id="current-video-title">No video selected</div>
+        </div>
+        <div class="playlist-area">
+            <h2>Playlist</h2>
+            <ul id="video-list">
+                <!-- Video items will be populated by JavaScript -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
